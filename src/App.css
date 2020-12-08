@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +13,45 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.item {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  text-align: center;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item * {
+  border: 1px solid black;
+}
+
+#desc {
+  grid-column: 1/3;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: .5fr 1fr 5fr;
+  background-color: #afd4dc;
+}
+
+#content > * {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#skillCont {
+  grid-row: 2/4;
+}
+
+.inputSubmit {
+      grid-column: 1/3;
+    width: 25%;
+    margin: auto;
+}
+
+#header {
+  grid-column: 1/3;
 }
